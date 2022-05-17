@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 class Setup {
     database = process.env.MONGO_INITDB_DATABASE
-
+    status = false
     /**
      * Initiate database
      */
@@ -12,7 +12,8 @@ class Setup {
         try {
             const databaseURL = this.getDatabaseURL()
             const connect = await mongoose.connect(databaseURL);
-            console.log(`Connected to `)
+            console.log(`Connected ${connect}`)
+            this.status = true
         } catch (error) {
             console.log(error)
         }
