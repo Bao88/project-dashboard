@@ -1,6 +1,8 @@
+require('dotenv').config()
 import express from 'express';
 import router from './lib/router';
 import path from 'path';
+import setup from './lib/database/setup'
 
 const { PORT = 3001 } = process.env;
 
@@ -11,7 +13,7 @@ app.use(express.json());
 
 // Serve API requests from the router
 app.use('/api', router);
-
+setup.initiate()
 // Serve storybook production bundle
 app.use('/storybook', express.static('dist/storybook'));
 

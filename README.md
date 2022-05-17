@@ -53,7 +53,6 @@ npm start
 In production, you have a single server serving everything.
 
 `/api/*` is the API endpoint.  
-`/storybook` is the Storybook.  
 `/*` is the client.
 
 ## Licensing
