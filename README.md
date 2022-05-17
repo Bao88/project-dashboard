@@ -56,10 +56,6 @@ In production, you have a single server serving everything.
 `/storybook` is the Storybook.  
 `/*` is the client.
 
-## Tests
-
-A test runner is not installed (right now). But TypeScript, linter and prettier are checked on commit and push thanks to husky and lintstaged.
-
 ## Licensing
 
 MIT
